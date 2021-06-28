@@ -3,7 +3,12 @@ import "./chat.scss"
 
 const Chat = () => {
 
+ 
+    const submitHandler = (e) => {
+        e.preventDefault();
 
+        console.log("submitted")
+    }
     return (
         <div className="chat">
             <div className="chat__title">
@@ -35,15 +40,19 @@ const Chat = () => {
                 </div>
             </div>
             <div className="chat__post">
-                <form>
-                    <input 
-                    type="text"
-                    placeholder="Enter Messsage"
-                    required
-                    autoComplete="off"
-                     />
+                <form onSubmit={submitHandler}>
+                  
+                        <input 
+                        type="text"
+                        placeholder="Enter Messsage"
+                        required
+                        autoComplete="off"
+                        />
+                   
+                    
+                     <button className="btn--user">Send</button>
                 </form>
-                <button className="btn--user">Send</button>
+                
             </div>
         </div>
     )

@@ -57,9 +57,12 @@
       background-color: yellow;
       width: 100%;
       padding-left: 1rem;
+      max-height: 600px;
+      overflow-y: scroll;
 
       ul {
         list-style: none;
+        overflow-wrap: break-word;
 
         li {
           background-color: lightblue;
@@ -75,18 +78,27 @@
   // chat user posts
 
   &__post {
-    display: flex;
+    // display: flex;
     padding-bottom: 1rem;
 
     form {
-      width: 88%;
+      // display: flex;
+
+      width: 100%;
       padding-left: 1rem;
     }
     input[type="text"] {
-      width: 100%;
+      display: block;
+      width: 80%;
+      // flex: 1;
+      // justify-self: end;
     }
 
     .btn--user {
+      width: min-content;
+      display: block;
+      float: right;
+      // overflow: hidden;
       padding: 0 1.2rem;
     }
   }
